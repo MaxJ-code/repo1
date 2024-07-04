@@ -10,4 +10,3 @@ int main()
     cin.get();
     return 0;
 }
-#change1303
