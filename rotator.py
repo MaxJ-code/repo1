@@ -4,14 +4,47 @@ def sort(parts, axis, slot):
     out = []
     for item in parts:
         if axis == "x":
-            if item.x == slot:
-                out.append(item)
+            if slot == -1:
+                if item.x == -1:
+                    out.append(item)
+                if item.x == -2:
+                    out.append(item)
+            if slot == 0:
+                if item.x == 0:
+                    out.append(item)
+            if slot == 1:
+                if item.x == 1:
+                    out.append(item)
+                if item.x == 2:
+                    out.append(item)            
         if axis == "y":
-            if item.y == slot:
-                out.append(item)
+            if slot == -1:
+                if item.y == -1:
+                    out.append(item)
+                if item.y == -2:
+                    out.append(item)
+            if slot == 0:
+                if item.y == 0:
+                    out.append(item)
+            if slot == 1:
+                if item.y == 1:
+                    out.append(item)
+                if item.y == 2:
+                    out.append(item)               
         if axis == "z":
-            if item.z == slot:
-                out.append(item)
+            if slot == -1:
+                if item.z == -1:
+                    out.append(item)
+                if item.z == -2:
+                    out.append(item)
+            if slot == 0:
+                if item.z == 0:
+                    out.append(item)
+            if slot == 1:
+                if item.z == 1:
+                    out.append(item)
+                if item.z == 2:
+                    out.append(item)
     return out
 
 def calc(const, pfr, axis):
@@ -29,7 +62,7 @@ def calc(const, pfr, axis):
         part.x = c[0]
         part.y = c[1]
         part.z = c[2]
-        print(part.name, part.x, part.y, part.z)
+        print(part. c, part.name, part.x, part.y, part.z)
 
 def rotate(parts, axis, slot):     #pfr = parts for rotation       #rp = rotated parts
     x = np.array([
@@ -49,5 +82,7 @@ def rotate(parts, axis, slot):     #pfr = parts for rotation       #rp = rotated
     ])
     const = [x, y, z]
     pfr = sort(parts, axis, slot)
+    for i in pfr:
+        print(i.x)
     calc(const, pfr, axis)
     return parts

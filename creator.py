@@ -1,19 +1,73 @@
 class Part:
-    def __init__(self, name, x, y, z):
+    def __init__(self, name, x, y, z, c):
         self.name = name
         self.x = x
         self.y = y
         self.z = z
+        self.c = c
+        
+def create(parts):
+    create_white(parts)
+    create_red(parts)
+    create_blue(parts)
+    create_yellow(parts)
+    create_orange(parts)
+    create_green(parts)
+    return parts
+    
+def create_white(parts):
+    for part_white in range(0, 3):
+        for val_y in range(0, 3):
+            globals()[f'{part_white}'] = Part(f'{(part_white*3)+val_y}', part_white-1, val_y-1, -2, "white")
+            parts.append(globals()[f'{part_white}'])
+    return parts
 
-def create():
-    for part_white in range(0, 9):
-        globals()[f'p{part_white}'] = Part(part_white, 0, 0, 0)
-        print(f'p{part_white}')
-    
-    
+def create_red(parts):
+    for part_red in range(0, 3):
+        for val_y in range(0, 3):
+            globals()[f'{part_red}'] = Part(f'{(part_red*3)+val_y+9}', 2, part_red-1, val_y-1, "red")
+            parts.append(globals()[f'{part_red}'])
+    return parts
+
+def create_blue(parts):
+    for part_blue in range(0, 3):
+        for val_y in range(0, 3):
+            globals()[f'{part_blue}'] = Part(f'{(part_blue*3)+val_y+18}', part_blue-1, 2, val_y-1, "blue")
+            parts.append(globals()[f'{part_blue}'])
+    return parts
+
+def create_yellow(parts):
+    for part_yellow in range(0, 3):
+        for val_y in range(0, 3):
+            globals()[f'{part_yellow}'] = Part(f'{(part_yellow*3)+val_y+27}', part_yellow-1, val_y-1, 2, "yellow")
+            parts.append(globals()[f'{part_yellow}'])
+    return parts
+
+def create_green(parts):
+    for part_green in range(0, 3):
+        for val_y in range(0, 3):
+            globals()[f'{part_green}'] = Part(f'{(part_green*3)+val_y+36}', -2, part_green-1, val_y-1, "green")
+            parts.append(globals()[f'{part_green}'])
+    return parts
+
+def create_orange(parts):
+    for part_orange in range(0, 3):
+        for val_y in range(0, 3):
+            globals()[f'{part_orange}'] = Part(f'{(part_orange*3)+val_y+45}', part_orange-1, -2, val_y-1, "orange")
+            parts.append(globals()[f'{part_orange}'])
     return parts
 
 
+
+
+
+
+
+parts = []
+create(parts)
+
+for i in parts:
+    print(i.name)
 
 
 #    for i in range(0, 125):
