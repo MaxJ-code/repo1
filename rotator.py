@@ -30,10 +30,6 @@ def calc(const, pfr, axis):
         part.y = c[1]
         part.z = c[2]
         print(part.name, part.x, part.y, part.z)
-    
-
-
-
 
 def rotate(parts, axis, slot):     #pfr = parts for rotation       #rp = rotated parts
     x = np.array([
@@ -42,16 +38,16 @@ def rotate(parts, axis, slot):     #pfr = parts for rotation       #rp = rotated
     [0, 1, 0]
     ])
     y = np.array([
-    [0, 0, 0],
-    [0, 0, 0],
-    [0, 0, 0]
+    [0, 0, 1],
+    [0, 1, 0],
+    [-1, 0, 0]
     ])
     z = np.array([
-    [0, 0, 0],
-    [0, 0, 0],
-    [0, 0, 0]
+    [0, -1, 0],
+    [1, 0, 0],
+    [0, 0, 1]
     ])
     const = [x, y, z]
     pfr = sort(parts, axis, slot)
-    rp = calc(const, pfr, axis)
+    calc(const, pfr, axis)
     return parts

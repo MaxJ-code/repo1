@@ -1,0 +1,71 @@
+# import tkinter as tk
+# from main import parts
+
+# def get_input():
+#     global x 
+#     x = entry_axis.get()
+#     global slot
+#     slot = entry_slot.get()
+#     label_axis.config(text=f"X:    Set: {x}")
+#     label_slot.config(text=f"Slot:    Set: {slot}")
+    
+# def switch(x, slot):
+#     return x, slot
+    
+# def status():
+    
+#     status = tk.Tk()
+#     status.title("Status")
+#     status.grid()
+#     count = 0
+#     for part in parts:
+#         tk.Label(status, text=part.name).grid(column=0, row=count)
+#         tk.Label(status, text=part.x).grid(column=1, row=count)
+#         tk.Label(status, text=part.y).grid(column=2, row=count)
+#         tk.Label(status, text=part.z).grid(column=3, row=count)
+#         count += 1
+#     status.mainloop()
+
+    
+# def quit():
+#     root.quit()
+    
+
+# root = tk.Tk()
+# root.title("GUI")
+
+# label_axis = tk.Label(root, text="X:")
+# label_axis.pack()
+
+# entry_axis = tk.Entry(root, width=40)
+# entry_axis.pack()
+
+# label_slot = tk.Label(root, text="Slot:")
+# label_slot.pack()
+
+# entry_slot = tk.Entry(root, width=40)
+# entry_slot.pack()
+
+
+# button = tk.Button(root, text="Submit", command=get_input and status)
+# button.pack()
+
+# button_quit = tk.Button(root, text="Quit", command=quit)
+# button_quit.pack()
+
+# root.mainloop()
+# # def UI(parts):
+# #     count = 1
+# #     root = Tk()
+# #     frm = ttk.Frame(root, padding=10)
+# #     frm.grid()
+# #     e1 = ttk.Entry(root).grid(column=0, row=0)
+    
+# #     for part in parts:
+# #         ttk.Label(frm, text=part.name).grid(column=0, row=count)
+# #         ttk.Label(frm, text=part.x).grid(column=1, row=count)
+# #         ttk.Label(frm, text=part.y).grid(column=2, row=count)
+# #         ttk.Label(frm, text=part.z).grid(column=3, row=count)
+# #         count += 1
+# #     root.mainloop()
+    

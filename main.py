@@ -1,19 +1,25 @@
-import numpy as np
 from creator import create
+from randomizer import randomizer
 from rotator import rotate
+from UI import ui
+
+def mainy():
+    parts = []
+    parts = create(parts)
+    #parts = randomizer(parts)
 
 
 
 
 
-
-
-
-parts = create()
-axis = "x"
-slot = 1
-partsnew = rotate(parts, axis, slot)
-
+# r = 1
+# while r == 1:
+#     axis, slot = ui()
+#     rotate(parts, axis, slot)
+#     try:
+#         r = int(input("Repeat?:  "))
+#     except:
+#         r = 0
 
 
 
